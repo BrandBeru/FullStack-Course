@@ -8,6 +8,8 @@ var persona = {
     }
 }
 
+console.log(persona.tamaño);
+
 persona.saludo();
 
 function person(nombre, edad,altura, peso){
@@ -16,6 +18,14 @@ function person(nombre, edad,altura, peso){
     this.altura = altura;
     this.peso = peso;
 }
-
-var person1 = new person("Juan", 21, 1.69, 75);
-console.log(person1.altura);
+var people = [];
+//Automatico
+for(var i = 0; i<3; i++){
+    var nameH = prompt("Nombre: ");
+    var age = prompt("Edad: ");
+    var height = prompt("Altura: ");
+    var weigh = prompt("Peso: ");
+    var human = new person(nameH,age, height,weigh);
+    people.push(human);
+    console.log(people);
+}
